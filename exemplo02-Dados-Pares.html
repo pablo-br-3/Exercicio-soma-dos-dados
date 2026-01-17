@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soma dos dados par por 10 vezes</h1>
+    <div id="dados"></div>
+    <script>
+const dados = document.getElementById("dados")
+ 
+ let npar =0
+ let x = 0
+   let dadoshtml = ""  
+
+   while(npar<10){ 
+   
+   x ++
+      let dado1 = parseInt(Math.random()*6+1)
+   let dado2 = parseInt(Math.random()*6+1)
+    let soma = dado1 + dado2 
+    if(soma % 2 ==0){
+  npar++
+   dadoshtml +=`<p>Dado X :  ${dado1} Dado Y : ${dado2}</p>
+   
+   `
+    }
+      
+  
+ 
+    
+   
+}
+dadoshtml +=`<p>Os dados foram jogados ${x} vezes</p>
+   
+   `
+dados.innerHTML = dadoshtml
+
+    </script>
+</body>
+</html>
